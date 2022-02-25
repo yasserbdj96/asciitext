@@ -28,5 +28,5 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
         
-      - name: Test ashar
+      - name: Script Test
         run: python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
