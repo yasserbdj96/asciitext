@@ -1,4 +1,3 @@
-
 <h1>Text to ASCII.</h1>
 
 <p>Text to ASCII Art Generator.</p>
@@ -7,10 +6,11 @@
 * python3
 
 <h2>Supported Distributions:</h2>
-|Distribution | Version Check | supported | status |Everything works|
-| :-----: | :-: | :-: | :-: | :-: |
-|Kali Linux|2022.1 | Yes | Working   | Yes|
-|windwos|10,8,7 | Yes | Working   |Yes|
+
+| Distribution | Version Check | Supported | Status  | Everything works |
+| :----------: | :-----------: | :-------: | :----:  | :--------------: |
+| Kali Linux   | 2022.1        | Yes       | Working | Yes              |
+| Windwos      | 10,8,7        | Yes       | Working | Yes              |
 
 <h2>Installation:</h2>
 
