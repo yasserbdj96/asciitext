@@ -44,7 +44,6 @@ python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
 ```
 ## 0.0.1 [26-02-2022]
  - First public release.
-
 ```
 
 <h1></h1> 
