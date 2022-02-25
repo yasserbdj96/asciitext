@@ -53,9 +53,7 @@ python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
 <h1></h1> 
 
 <p align="center">
-    <img alt="btc" height="100" src="https://raw.githubusercontent.com/yasserbdj96/yasserbdj96/main/images/btc.png">
-    <br>
-    BTC : 1AgAZQjKLQkqU64NNVXfn1LZvzaojLHoXj
+    BTC : 1HLuGsaKgFWSp7aY9zQAXEB2xdPS1QhJTu
 </p>
 
 
