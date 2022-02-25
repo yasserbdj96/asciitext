@@ -1,3 +1,6 @@
+<p align="center"><img align="center" src="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/screenshot/screenshot_0.png"></p>
+
+
 <h1>Text to ASCII.</h1>
 
 <p>Text to ASCII Art Generator.</p>
@@ -35,8 +38,8 @@ python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
 <h2>Screenshot:</h2>
 
 <div align="center">
-    <a href="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/screenshot/screenshot_00.png">
-        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/screenshot/screenshot_00.png">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/screenshot/screenshot_1.png">
+        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/screenshot/screenshot_1.png">
     </a>
 </div>
 
