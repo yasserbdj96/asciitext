@@ -15,10 +15,10 @@ class ascii:
     def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
         ass=[]
         # open the sample file used:
-        file = open(font_file, encoding="utf8")
+        with open(font_file,'r', encoding="utf-8") as file:
   
-        # read the content of the file opened:
-        content = file.readlines()
+            # read the content of the file opened:
+            content = file.readlines()
     
         # last line:
         ascii_text=content[len(content)-1]
