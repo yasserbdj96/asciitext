@@ -1,0 +1,6 @@
+## 0.0.2 [26-02-2022]
+ - Fix bugs.
+ - Build a package instead of a script.
+ 
+## 0.0.1
+ - First public release.

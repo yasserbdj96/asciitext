@@ -5,6 +5,8 @@
 
 <p>Text to ASCII Art Generator.</p>
 
+[![Python package](https://github.com/yasserbdj96/asciitext/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/asciitext/actions/workflows/python-app.yml)
+
 <h2>Languages:</h2>
 * python3
 
@@ -19,20 +21,24 @@
 <h2>Installation:</h2>
 
 ```
-pip install -r requirements.txt
+pip install asciitext
 ```
 
 <h2>Usage:</h2>
 
 ```python
-python3 asciitext.py <FONT_PATH> <TEXT> <TEXT_COLOR> <BACKGROUND_COLOR>
+from asciitext import *
 
+print(ascii.asciitext(<FONT_PATH>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE>))
 ```
 
 <h2>Example:</h2>
 
 ```python
-python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
+from asciitext import *
+
+# Example:1
+print(ascii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
 ```
 
 <h2>Screenshot:</h2>
@@ -46,7 +52,11 @@ python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
 <h2>Changelog History:</h2>
 
 ```
-## 0.0.1 [26-02-2022]
+## 0.0.2 [26-02-2022]
+ - Fix bugs.
+ - Build a package instead of a script.
+ 
+## 0.0.1
  - First public release.
 ```
 
@@ -55,8 +65,6 @@ python asciitext.py "fonts/ANSI_Shadow.txt" "#asciitext" "#ff0000"
 <p align="center">
     BTC : 1HLuGsaKgFWSp7aY9zQAXEB2xdPS1QhJTu
 </p>
-
-
 
 <div align="center">
     <a align="center" href="https://ko-fi.com/yasserbdj96">
