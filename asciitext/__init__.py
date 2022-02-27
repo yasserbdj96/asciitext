@@ -20,7 +20,7 @@ class ascii:
         if "http://" in font_file or "https://" in font_file:
             content=[]
             response=requests.get(font_file)
-            data=str(response.text)
+            data=response.text
             for i, line in enumerate(data.split('\n')):
                 content.append(f'{line}'.replace("\r","\n"))
         #if path:
@@ -28,8 +28,8 @@ class ascii:
             # open the sample file used:
             with open(font_file,'r', encoding="utf-8") as file:
                 # read the content of the file opened:
-                content = str(file.readlines())
-        
+                content = file.readlines()
+                
         # last line:
         ascii_text=content[len(content)-1]
     
@@ -48,7 +48,7 @@ class ascii:
     
         # n:
         n=int(content[len(content)-2].replace("\n",""))
-    
+        
         for i in range(len(text_split)):
             pls=int(ascii_text.find(text_split[i]))
         
@@ -56,7 +56,7 @@ class ascii:
             lls=[]
             if pls>-1:
                 for i in range(0,n):
-                    xrs.append(content[(pls*n)+i].replace("\n",""))
+                    xrs.append(str(content[(pls*n)+i].replace("\n","")))
                     #lls.append(f"l{i}")
                 
                 #print(lls)
