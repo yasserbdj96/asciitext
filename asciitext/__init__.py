@@ -57,9 +57,6 @@ class ascii:
             if pls>-1:
                 for i in range(0,n):
                     xrs.append(str(content[(pls*n)+i].replace("\n","")))
-                    #lls.append(f"l{i}")
-                
-                #print(lls)
             ass.append(xrs)
         r=[]
         for y in range(0,n):
