@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest] #windows-latest
+        os: [ubuntu-latest, macos-latest, windows-latest] #windows-latest
         python-version: [3.6, 3.7, 3.8, 3.9]
     steps:
       - uses: actions/checkout@v2
@@ -25,8 +25,11 @@ jobs:
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
         
-      - name: Install requirements
+      - name: Install Package
         run: pip install asciitext
+        
+      - name: Install requirements
+        run: pip install -r requirements.txt
         
       - name: Testing the Package
         run: python examples.py
