@@ -7,6 +7,7 @@
 import sys
 import os.path
 from os import path
+import os
 from hexor import hexor
 import requests
 
@@ -14,6 +15,10 @@ import requests
 class ascii:
     #asciitext:
     def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
+        if os.name == 'nt':
+            os.system("chcp 65001")
+            os.system("set PYTHONIOENCODING=utf-8")
+        
         ass=[]
         #if url:
         if "http://" in font_file or "https://" in font_file:
