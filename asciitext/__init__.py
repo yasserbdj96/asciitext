@@ -8,18 +8,27 @@ import sys
 import os.path
 from os import path
 from hexor import hexor
+import requests
 
 #start ascii class:
 class ascii:
     #asciitext:
     def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
         ass=[]
-        # open the sample file used:
-        with open(font_file,'r', encoding="utf-8") as file:
-  
-            # read the content of the file opened:
-            content = file.readlines()
-    
+        #if url:
+        if "http://" in font_file or "https://" in font_file:
+            content=[]
+            response=requests.get(font_file)
+            data=response.text
+            for i, line in enumerate(data.split('\n')):
+                content.append(f'{line}'.replace("\r","\n"))
+        #if path:
+        else:
+            # open the sample file used:
+            with open(font_file,'r', encoding="utf-8") as file:
+                # read the content of the file opened:
+                content = file.readlines()
+        
         # last line:
         ascii_text=content[len(content)-1]
     

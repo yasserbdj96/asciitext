@@ -7,7 +7,7 @@
 from setuptools import setup,find_packages
 setup(
     name="asciitext",
-    version="0.0.2",
+    version="0.0.4",
     author="YasserBDJ96",
     author_email="yasser.bdj96@gmail.com",
     description='''Text to ASCII Art Generator.''',
@@ -20,7 +20,7 @@ setup(
         'Author WebSite': "https://yasserbdj96.github.io/",
         'Instagram': "https://www.instagram.com/yasserbdj96/",
     },
-    install_requires=["hexor"],
+    install_requires=["hexor","requests"],
     keywords=['yasserbdj96', 'python', 'ascii', 'texts', 'colors.', 'hex','background', 'rgb'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
