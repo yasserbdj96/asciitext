@@ -7,7 +7,6 @@
 import sys
 import os.path
 from os import path
-import os
 from hexor import hexor
 import requests
 
@@ -15,18 +14,13 @@ import requests
 class ascii:
     #asciitext:
     def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
-        if os.name == 'nt':
-            os.system("chcp 65001")
-            os.system("set PYTHONIOENCODING=utf-8")
-            os.system("Setlocal EnableDelayedExpansion")
-            os.system("chcp 65001 > nul")
             
         ass=[]
         #if url:
         if "http://" in font_file or "https://" in font_file:
             content=[]
             response=requests.get(font_file)
-            data=response.text
+            data=str(response.text)
             for i, line in enumerate(data.split('\n')):
                 content.append(f'{line}'.replace("\r","\n"))
         #if path:
@@ -34,7 +28,7 @@ class ascii:
             # open the sample file used:
             with open(font_file,'r', encoding="utf-8") as file:
                 # read the content of the file opened:
-                content = file.readlines()
+                content = str(file.readlines())
         
         # last line:
         ascii_text=content[len(content)-1]
