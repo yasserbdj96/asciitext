@@ -18,7 +18,9 @@ class ascii:
         if os.name == 'nt':
             os.system("chcp 65001")
             os.system("set PYTHONIOENCODING=utf-8")
-        
+            os.system("Setlocal EnableDelayedExpansion")
+            os.system("chcp 65001 > nul")
+            
         ass=[]
         #if url:
         if "http://" in font_file or "https://" in font_file:
