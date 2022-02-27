@@ -11,7 +11,7 @@
 * python3
 
 <h2>Requirements</h2>
-[✓] hexor
+[✓] hexor<br>
 [✓] requests
 
 <h2>Supported Distributions:</h2>
