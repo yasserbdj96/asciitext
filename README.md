@@ -10,6 +10,10 @@
 <h2>Languages:</h2>
 * python3
 
+<h2>Requirements</h2>
+[✓] hexor
+[✓] requests
+
 <h2>Supported Distributions:</h2>
 
 | Distribution | Version Check     | Python Test Version | Supported | Status      | Everything works |
@@ -29,16 +33,20 @@ pip install asciitext
 ```python
 from asciitext import *
 
-print(ascii.asciitext(<FONT_PATH>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE>))
+print(ascii.asciitext(<FONT_PATH/URL>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE>))
 ```
 
-<h2>Example:</h2>
+<h2>Examples:</h2>
 
 ```python
 from asciitext import *
 
 # Example:1
 print(ascii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
+
+# Example:2
+font_url="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/fonts/Calvin_S.txt"
+print(ascii.asciitext(font_url,"#asciitext","#ff0000"))
 ```
 
 <h2>Screenshot:</h2>
@@ -52,6 +60,13 @@ print(ascii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
 <h2>Changelog History:</h2>
 
 ```
+## 0.0.4 [27-02-2022]
+ - Fix bugs.
+ - Enable type import from url.
+ 
+## 0.0.3 [26-02-2022]
+ - Fix bugs.
+
 ## 0.0.2 [26-02-2022]
  - Fix bugs.
  - Build a package instead of a script.
@@ -62,20 +77,8 @@ print(ascii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
 
 <h1></h1> 
 
-<p align="center">
-    BTC : 1HLuGsaKgFWSp7aY9zQAXEB2xdPS1QhJTu
-</p>
-
 <div align="center">
-    <a align="center" href="https://ko-fi.com/yasserbdj96">
-        <img alt="ko-fi" align="center" src="https://ko-fi.com/img/githubbutton_sm.svg">
-    </a>
-</div>
-
-<div align="center">
-    <a href="https://yasserbdj96.github.io">
-        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/yasserbdj96/main/images/yasserbdj96.png">
-    </a>
+    <a href="http://yasserbdj96.github.io/">Go to this link to get more information</a>
     <br>
     <a href="https://github.com/yasserbdj96/asciitext" align="center">
         <img align="center"  alt="" src="https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.asciitext">
