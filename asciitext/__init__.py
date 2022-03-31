@@ -10,8 +10,8 @@ from os import path
 from hexor import hexor
 import requests
 
-#start ascii class:
-class ascii:
+#start asciii class:
+class asciii:
     #asciitext:
     def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
         ass=[]
@@ -36,20 +36,22 @@ class ascii:
         ascii_text_split=list(ascii_text)
 
         new_text_split=[]
-        for g in range(len(text_split)):
+        for g,x5 in enumerate(text_split):
+        #for g in range(len(text_split)):
         
-            not_in_list = text_split[g] not in ascii_text_split
+            not_in_list = x5 not in ascii_text_split
         
             if not_in_list==False:
-                new_text_split.append(text_split[g])
+                new_text_split.append(x5)
             
         text_split=new_text_split
     
         # n:
         n=int(content[len(content)-2].replace("\n",""))
         
-        for i in range(len(text_split)):
-            pls=int(ascii_text.find(text_split[i]))
+        for i,x4 in enumerate(text_split):
+        #for i in range(len(text_split)):
+            pls=int(ascii_text.find(x4))
         
             xrs=[]
             lls=[]
