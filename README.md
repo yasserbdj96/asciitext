@@ -33,7 +33,7 @@ pip install asciitext
 ```python
 from asciitext import *
 
-print(ascii.asciitext(<FONT_PATH/URL>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE>))
+print(asciii.asciitext(<FONT_PATH/URL>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE>))
 ```
 
 <h2>Examples:</h2>
@@ -42,11 +42,11 @@ print(ascii.asciitext(<FONT_PATH/URL>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<CO
 from asciitext import *
 
 # Example:1
-print(ascii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
+print(asciii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
 
 # Example:2
 font_url="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/fonts/Calvin_S.txt"
-print(ascii.asciitext(font_url,"#asciitext","#ff0000"))
+print(asciii.asciitext(font_url,"#asciitext","#ff0000"))
 ```
 
 <h2>Screenshot:</h2>
