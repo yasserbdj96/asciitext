@@ -14,7 +14,6 @@ import requests
 class ascii:
     #asciitext:
     def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
-            
         ass=[]
         #if url:
         if "http://" in font_file or "https://" in font_file:
@@ -61,22 +60,25 @@ class ascii:
         r=[]
         for y in range(0,n):
             m=[]
-            for x in range(len(ass)):
-        
-                m.append(ass[x][y])
+            for x,x3 in enumerate(ass):
+            #for x in range(len(ass)):
+                m.append(x3[y])
             r.append(m)
         
         f=[]
-        for w in range(len(r)):
+        for w,x1 in enumerate(r):
+        #for w in range(len(r)):
             l=""
-            for z in range(len(r[w])):
-                l+=r[w][z]
+            for z,x2 in enumerate(x1):
+            #for z in range(len(r[w])):
+                l+=x2
             f.append(l)
         
         q=""
-        for o in range(len(f)):
-            q+=f[o]+"\n"
+        for o,x0 in enumerate(f):
+        #for o in range(len(f)):
+            q+=x0+"\n"
     
         p1=hexor(True,color_type)
         return p1.c(q[0:len(q)-1],f_color,bg_color)
-#}END.
+#}END.
