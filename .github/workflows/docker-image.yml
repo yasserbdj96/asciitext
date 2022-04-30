@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t asciitext-docker . --file Dockerfile --tag asciitext-docker:$(date +%s)
+      run: docker build . --file Dockerfile --tag asciitext-docker:$(date +%s)
     - name: Run the Docker image
-      run: docker run -i -t asciitext-docker
+      run: docker run asciitext-docker
