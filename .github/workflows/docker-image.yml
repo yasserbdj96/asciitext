@@ -1,28 +1,22 @@
-name: Docker Image CI
-description: 'Runs kyverno cli'
-branding:
-  icon: 'command'
-  color: 'red'
-inputs:
-  command:
-    description: 'kyverno command to run'
-    required: true
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.command }}
-    
+name: This a workflow title 
+on: [push] # When pushing to any branch then run this action
+# Env variable
+env:
+  DOCKER_USER: ${{secrets.DOCKER_USER}}
+  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+  REPO_NAME: ${{secrets.REPO_NAME}}
 jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
+  push-image-to-docker-hub:  # job name
+    runs-on: ubuntu-latest  # runner name : (ubuntu latest version) 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-    #  run: docker build -t asciitext-docker . local < Dockerfile
-      run: docker build -t DOCKER_HUB_USER/kyverno-action:v1.0.0 .
-    - name: Run the Docker image
-      run: docker run DOCKER_HUB_USER/kyverno-action:v1.0.0 "kyverno version"
+    - uses: actions/checkout@v2 # first action : checkout source code
+    - name: docker login
+      run: | # log into docker hub account
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD  
+    - name: Get current date # get the date of the build
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
+    - name: Build the Docker image # push The image to the docker hub
+      run: docker build . --file Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
+    - name: Docker Push
+      run: docker push $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
