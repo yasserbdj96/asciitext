@@ -1,11 +1,19 @@
 name: Docker Image CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: Docker Image CI
+description: 'Runs kyverno cli'
+branding:
+  icon: 'command'
+  color: 'red'
+inputs:
+  command:
+    description: 'kyverno command to run'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
+    
 jobs:
 
   build:
@@ -16,6 +24,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
     #  run: docker build -t asciitext-docker . local < Dockerfile
-      run: docker build -t asciitext-docker . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build -t DOCKER_HUB_USER/kyverno-action:v1.0.0 .
     - name: Run the Docker image
-      run: docker run -i -t asciitext-docker:$(date +%s)
+      run: docker run DOCKER_HUB_USER/kyverno-action:v1.0.0 "kyverno version"
