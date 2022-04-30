@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag asciitext-docker:$(date +%s)
     - name: Run the Docker image
-      run: docker run asciitext-docker
+      run: docker run asciitext-docker:$(date +%s)
