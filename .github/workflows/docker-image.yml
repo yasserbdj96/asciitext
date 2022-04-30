@@ -1,5 +1,4 @@
 name: Docker Image CI
-name: Docker Image CI
 description: 'Runs kyverno cli'
 branding:
   icon: 'command'
