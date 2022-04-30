@@ -18,4 +18,4 @@ jobs:
     #  run: docker build -t asciitext-docker . local < Dockerfile
       run: docker build -t asciitext-docker . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Run the Docker image
-      run: docker run -i -t asciitext-docker
+      run: docker run -i -t asciitext-docker:$(date +%s)
