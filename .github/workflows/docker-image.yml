@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMPOSE_FILE: .ci/docker-compose.yml
-      DOCKER_USER: yasserbdj96
-      DOCKER_PASS: 184853854//**..
+      DOCKER_USER:
+      DOCKER_PASS: 
 
     steps:
     - name: Checkout code
