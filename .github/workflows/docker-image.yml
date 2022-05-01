@@ -13,13 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     #steps:
-    #- uses: actions/checkout@v3
+    #
     steps:
+    - uses: actions/checkout@v3
     - name: Check out code
       uses: actions/checkout@v2
     - name: Build docker images
-      run: docker-compose build
-    - name: Setup database
-      run: docker-compose run setup
+      run: docker build -t local < Dockerfile
     - name: Run tests
-      run: docker-compose run test
+      run: docker run -it -v $PWD:/srv -w/srv local make test
