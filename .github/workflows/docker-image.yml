@@ -1,26 +1,22 @@
-name: Test
+name: Docker Image CI
+
 on:
+  push:
+    branches: [ main ]
   pull_request:
-  push: { branches: master }
+    branches: [ main ]
 
 jobs:
-  test:
-    name: Run test suite
+
+  build:
+
     runs-on: ubuntu-latest
-    env:
-      COMPOSE_FILE: .ci/docker-compose.yml
-      DOCKER_USER:
-      DOCKER_PASS: 
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Login to DockerHub
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-
-    - name: Build docker images
-      run: docker-compose build
-
-    - name: Run tests
-      run: docker-compose run test
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+    #  run: docker build -t asciitext-docker . local < Dockerfile
+      run: |
+        docker build -t asciitext-docker . local < Dockerfile
+    #- name: Run the Docker image
+    #  run: docker run DOCKER_HUB_USER/kyverno-action:v1.0.0 "kyverno version"
