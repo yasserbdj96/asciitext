@@ -12,11 +12,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    #steps:
+    #- uses: actions/checkout@v3
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-    #  run: docker build -t asciitext-docker . local < Dockerfile
-      run: |
-        docker build -t asciitext-docker . local < Dockerfile
-    #- name: Run the Docker image
-    #  run: docker run DOCKER_HUB_USER/kyverno-action:v1.0.0 "kyverno version"
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Build docker images
+      run: docker-compose build
+    - name: Setup database
+      run: docker-compose run setup
+    - name: Run tests
+      run: docker-compose run test
