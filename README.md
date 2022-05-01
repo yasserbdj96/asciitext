@@ -26,15 +26,15 @@
 
 ```bash
 # pull:
-docker pull yasserbdj96/asciitext
+docker pull yasserbdj96/asciitext:latest
 
 # build:
-docker build -t asciitext .
+docker build -t docker.io/yasserbdj96/asciitext:latest .
 
 # run:
-docker run -i -t asciitext
+docker run -i -t docker.io/yasserbdj96/asciitext:latest
 # OR
-docker run -e USE=True -e FONT="fonts/ANSI_Shadow.txt" -e TEXT="your text" -e COLOR="#ff0000" -e COLOR_BG="#ffffff" -i -t asciitext
+docker run -e USE=True -e FONT="fonts/ANSI_Shadow.txt" -e TEXT="your text" -e COLOR="#ff0000" -e COLOR_BG="#ffffff" -i -t docker.io/yasserbdj96/asciitext:latest
 ```
 
 
