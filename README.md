@@ -22,6 +22,22 @@
 | Windwos      | 11.6.4            | 3.6, 3.7, 3.8, 3.9  | Yes       | Not Working | No               |
 | MacOS        | 10.0.20348        | 3.6, 3.7, 3.8, 3.9  | Yes       | Working     | Yes              |
 
+<h2>Docker pull,build & run:</h2>
+
+```bash
+# pull:
+docker pull yasserbdj96/asciitext
+
+# build:
+docker build -t asciitext .
+
+# run:
+docker run -i -t asciitext
+# OR
+docker run -e USE=True -e FONT="fonts/ANSI_Shadow.txt" -e TEXT="your text" -e COLOR="#ff0000" -e COLOR_BG="#ffffff" -i -t asciitext
+```
+
+
 <h2>Installation:</h2>
 
 ```

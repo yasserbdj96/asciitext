@@ -1,6 +1,7 @@
-# docker build -t asciitext-docker .
-# docker run -i -t asciitext-docker
-# 
+# docker build -t asciitext .
+# docker run -i -t asciitext
+# docker run -e USE=True -e FONT="fonts/ANSI_Shadow.txt" -e TEXT="your text" -e COLOR="#ff0000" -e COLOR_BG="#ffffff" -i -t asciitext
+
 FROM python:3.9
 
 WORKDIR /wrdir
