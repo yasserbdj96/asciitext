@@ -2,8 +2,8 @@ from asciitext import *
 import os
 
 if os.name == 'nt':
-    os.system("Setlocal EnableDelayedExpansion")
-    os.system("chcp 65001 > nul")
+    #os.system("Setlocal EnableDelayedExpansion")
+    #os.system("chcp 65001 > nul")
     w=True
 else:
     w=False
