@@ -8,7 +8,7 @@ if os.name == 'nt':
 else:
     w=False
 asciitext_chars=""#.encode("utf-8")
-br="\n".encode("utf-8")
+br="\n"#.encode("utf-8")
 
 try:
     import os
