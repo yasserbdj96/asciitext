@@ -1,12 +1,14 @@
 from asciitext import *
 import os
 
-if os.name == 'nt':
-    #os.system("Setlocal EnableDelayedExpansion")
-    #os.system("chcp 65001 > nul")
-    w=True
-else:
-    w=False
+def is_nt(x):
+    if os.name == 'nt':
+        return True
+    else:
+        return False
+
+#os.system("Setlocal EnableDelayedExpansion")
+#os.system("chcp 65001 > nul")
 
 asciitext_chars=""#.encode("utf-8")
 br="\n"#.encode("utf-8")
@@ -28,7 +30,7 @@ try:
         #this is error for pass try.
         print(os.environ['X'])
 except Exception as e:
-    if w==False:
+    if not is_nt(os.name):
         # Example:1
         asciitext_chars+=asciii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000")+br#.encode("utf-8")+br
 
