@@ -4,8 +4,7 @@ import os
 def is_nt(x):
     if os.name == 'nt':
         return True
-    else:
-        return False
+    return False
 
 #os.system("Setlocal EnableDelayedExpansion")
 #os.system("chcp 65001 > nul")
