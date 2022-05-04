@@ -3,7 +3,7 @@ import os
 
 if os.name == 'nt':
     os.system("Setlocal EnableDelayedExpansion")
-    os.system("chcp 65001 > nul")
+    os.system("chcp 65001")
 
 try:
     import os
