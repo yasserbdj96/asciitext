@@ -5,6 +5,9 @@ if os.name == 'nt':
     os.system("Setlocal EnableDelayedExpansion")
     os.system("chcp 65001")
 
+asciitext_chars="".encode("utf-8")
+br="\n".encode("utf-8")
+
 try:
     import os
     #
@@ -15,19 +18,19 @@ try:
         color_bg = os.environ['COLOR_BG'] if "COLOR_BG" in os.environ else "#000000"
     
         if color_bg=="#000000":
-            print(asciii.asciitext(font,text,color))
+            asciitext_chars+=asciii.asciitext(font,text,color).encode("utf-8")+br
         else:
-            print(asciii.asciitext(font,text,color,color_bg))
+            asciitext_chars+=asciii.asciitext(font,text,color,color_bg).encode("utf-8")+br
     else:
         #this is error for pass try.
         print(os.environ['X'])
 except Exception as e:
     # Example:1
-    print(asciii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
+    asciitext_chars+=asciii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000").encode("utf-8")+br
 
     # Example:2
     font_url="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/fonts/Calvin_S.txt"
-    print(asciii.asciitext(font_url,"#asciitext","#ff0000"))
+    asciitext_chars+=asciii.asciitext(font_url,"#asciitext","#ff0000").encode("utf-8")+br
 
 finally:
-    pass
+    print(asciitext_chars.decode("utf-8"))
