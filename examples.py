@@ -3,10 +3,11 @@ import os
 
 if os.name == 'nt':
     os.system("Setlocal EnableDelayedExpansion")
-    os.system("chcp 65001")
+    os.system("chcp 65001 > nul")
     w=True
 else:
     w=False
+
 asciitext_chars=""#.encode("utf-8")
 br="\n"#.encode("utf-8")
 
