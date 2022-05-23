@@ -94,7 +94,7 @@ print(asciii.asciitext(font_url,"#asciitext","#ff0000"))
 <h1></h1> 
 
 <div align="center">
-    <a href="http://yasserbdj96.github.io/">Go to this link to get more information</a>
+    <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
     <br>
     <a href="https://github.com/yasserbdj96/asciitext" align="center">
         <img align="center"  alt="" src="https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.asciitext">
