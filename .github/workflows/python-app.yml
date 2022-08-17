@@ -19,7 +19,7 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Create Workspace Folder
-        run: mkdir -p wrdir && mkdir -p wrdir/asciitext
+        run: mkdir -p wrdir && mkdir -p wrdir/asciitext && mkdir -p wrdir/fonts
       - name: Copy Files to Workspace Folder
         run: cp -r asciitext/* wrdir/asciitext && cp run.py wrdir/run.py && cp -r fonts/* wrdir/fonts
       - name: pip Upgrade
