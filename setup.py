@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 # coding:utf-8
-#code by:YasserBDJ96
-#email:yasser.bdj96@gmail.com
+#   |                                                          |
+# --+----------------------------------------------------------+--
+#   |   Code by : yasserbdj96                                  |
+#   |   Email   : yasser.bdj96@gmail.com                       |
+#   |   Github  : https://github.com/yasserbdj96               |
+#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+# --+----------------------------------------------------------+--  
+#   |        all posts #yasserbdj96 ,all views my own.         |
+# --+----------------------------------------------------------+--
+#   |                                                          |
 
 #START{
 from setuptools import setup,find_packages
 setup(
     name="asciitext",
-    version="0.0.4",
+    version="0.0.5",
     author="YasserBDJ96",
     author_email="yasser.bdj96@gmail.com",
     description='''Text to ASCII Art Generator.''',

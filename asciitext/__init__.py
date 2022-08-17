@@ -1,19 +1,24 @@
 #!/usr/bin/env python
 # coding:utf-8
-#code by:YasserBDJ96
-#email:yasser.bdj96@gmail.com
+#   |                                                          |
+# --+----------------------------------------------------------+--
+#   |   Code by : yasserbdj96                                  |
+#   |   Email   : yasser.bdj96@gmail.com                       |
+#   |   Github  : https://github.com/yasserbdj96               |
+#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+# --+----------------------------------------------------------+--  
+#   |        all posts #yasserbdj96 ,all views my own.         |
+# --+----------------------------------------------------------+--
+#   |                                                          |
 
 #START{
-import sys
-import os.path
-from os import path
 from hexor import hexor
 import requests
 
 #start asciii class:
 class asciii:
     #asciitext:
-    def asciitext(font_file,text,f_color="#ffffff",bg_color="",color_type="hex"):
+    def asciitext(font_file,text,f_color="#ffffff",bg_color=False,color_type="hex"):
         ass=[]
         #if url:
         if "http://" in font_file or "https://" in font_file:
@@ -82,5 +87,9 @@ class asciii:
             q+=x0+"\n"
     
         p1=hexor(True,color_type)
-        return p1.c(q[0:len(q)-1],f_color,bg_color)
-#}END.
+
+        if bg_color!=False:
+            return p1.c(q[0:len(q)-1],f_color,bg_color)
+        else:
+            return p1.c(q[0:len(q)-1],f_color)
+#}END.

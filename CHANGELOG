@@ -1,3 +1,13 @@
+## 0.0.5 [17-08-2022]
+ - Fix bugs.
+
+## 0.0.4 [27-02-2022]
+ - Fix bugs.
+ - Enable type import from url.
+ 
+## 0.0.3 [26-02-2022]
+ - Fix bugs.
+
 ## 0.0.2 [26-02-2022]
  - Fix bugs.
  - Build a package instead of a script.

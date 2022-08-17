@@ -21,44 +21,46 @@
 | Ubuntu       | 20.04.3           | 3.6, 3.7, 3.8, 3.9  | Yes       | Working     | Yes              |
 | Windwos      | 11.6.4            | 3.6, 3.7, 3.8, 3.9  | Yes       | Not Working | No               |
 | MacOS        | 10.0.20348        | 3.6, 3.7, 3.8, 3.9  | Yes       | Working     | Yes              |
-
-<h2>Docker pull,build & run:</h2>
-
-```bash
-# pull:
-docker pull yasserbdj96/asciitext:latest
-
-# build:
-docker build -t docker.io/yasserbdj96/asciitext:latest .
-
-# run:
-docker run -i -t docker.io/yasserbdj96/asciitext:latest
-# OR
-docker run -e USE=True -e FONT="fonts/ANSI_Shadow.txt" -e TEXT="your text" -e COLOR="#ff0000" -e COLOR_BG="#ffffff" -i -t docker.io/yasserbdj96/asciitext:latest
-```
+| Android (termux)| 10 (0.118.0)| 3.6, 3.7, 3.8, 3.9, 3.10  | Yes    | Working     | Yes              |
+| Android (nethunter)| 10 (2022.3)| 3.6, 3.7, 3.8, 3.9, 3.10| Yes    | Working     | Yes              |
 
 
-<h2>Installation:</h2>
+<h2>Python Package Installation:</h2>
 
 ```
+# install from pypi:
 pip install asciitext
+
+# local install:
+git clone https://github.com/yasserbdj96/asciitext.git
+cd asciitext
+sudo python setup.py install
 ```
 
-<h2>Usage:</h2>
+<h2>Run without installation:</h2>
+
+```
+git clone https://github.com/yasserbdj96/asciitext.git
+cd asciitext
+pip install -r requirements.txt
+python3 run.py '<FONT_PATH/FONT_URL>' '<COLOR>' '<BACKGROUND/FALSE>' '<TEXT>'
+```
+
+<h2>Script Usage:</h2>
 
 ```python
 from asciitext import *
 
-print(asciii.asciitext(<FONT_PATH/URL>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE>))
+print(asciii.asciitext(<FONT_PATH/URL>,<TEXT>,<TEXT_COLOR>,<BACKGROUND_COLOR>,<COLOR_TYPE[hex/rgb]>))
 ```
 
-<h2>Examples:</h2>
+<h2>Script Examples:</h2>
 
 ```python
 from asciitext import *
 
 # Example:1
-print(asciii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
+print(asciii.asciitext("./fonts/ANSI_Shadow.txt","#asciitext","#ff0000"))
 
 # Example:2
 font_url="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/fonts/Calvin_S.txt"
@@ -76,6 +78,9 @@ print(asciii.asciitext(font_url,"#asciitext","#ff0000"))
 <h2>Changelog History:</h2>
 
 ```
+## 0.0.5 [17-08-2022]
+ - Fix bugs.
+
 ## 0.0.4 [27-02-2022]
  - Fix bugs.
  - Enable type import from url.
@@ -92,11 +97,12 @@ print(asciii.asciitext(font_url,"#asciitext","#ff0000"))
 ```
 
 <h1></h1> 
+Don't forget to star ⭐ this repository
+<br>
 
+all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
+
+<br>
 <div align="center">
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
-    <br>
-    <a href="https://github.com/yasserbdj96/asciitext" align="center">
-        <img align="center"  alt="" src="https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.asciitext">
-    </a>
 </div>

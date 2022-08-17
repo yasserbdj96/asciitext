@@ -1,41 +1,29 @@
+#   |                                                          |
+# --+----------------------------------------------------------+--
+#   |   Code by : yasserbdj96                                  |
+#   |   Email   : yasser.bdj96@gmail.com                       |
+#   |   Github  : https://github.com/yasserbdj96               |
+#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+# --+----------------------------------------------------------+--  
+#   |        all posts #yasserbdj96 ,all views my own.         |
+# --+----------------------------------------------------------+--
+#   |                                                          |
+
+#START{
 from asciitext import *
-import os
-
-def is_nt(x):
-    if os.name == 'nt':
-        return True
-    return False
-
-#os.system("Setlocal EnableDelayedExpansion")
-#os.system("chcp 65001 > nul")
-
-asciitext_chars=""#.encode("utf-8")
-br="\n"#.encode("utf-8")
+import sys
 
 try:
-    import os
-    #
-    if "USE" in os.environ and os.environ['USE']=="True":
-        font = os.environ['FONT'] if "FONT" in os.environ else "fonts/ANSI_Shadow.txt"
-        text = os.environ['TEXT'] if "TEXT" in os.environ else "#asciitext"
-        color = os.environ['COLOR'] if "COLOR" in os.environ else "#ff0000"
-        color_bg = os.environ['COLOR_BG'] if "COLOR_BG" in os.environ else "#000000"
-    
-        if color_bg=="#000000":
-            asciitext_chars+=asciii.asciitext(font,text,color)+br#.encode("utf-8")+br
-        else:
-            asciitext_chars+=asciii.asciitext(font,text,color,color_bg)+br#.encode("utf-8")+br
+    font=sys.argv[1]
+    color=sys.argv[2]
+    bg=sys.argv[3]
+    text=sys.argv[4]
+
+    if bg.upper()=="FALSE":
+        print(asciii.asciitext(font,text,color))
     else:
-        #this is error for pass try.
-        print(os.environ['X'])
-except Exception as e:
-    if not is_nt(os.name):
-        # Example:1
-        asciitext_chars+=asciii.asciitext("fonts/ANSI_Shadow.txt","#asciitext","#ff0000")+br#.encode("utf-8")+br
+        print(asciii.asciitext(font,text,color,bg))
 
-    # Example:2
-    font_url="https://raw.githubusercontent.com/yasserbdj96/asciitext/main/fonts/Calvin_S.txt"
-    asciitext_chars+=asciii.asciitext(font_url,"#asciitext","#ff0000")+br#.encode("utf-8")+br
-
-finally:
-    print(asciitext_chars)#.decode("utf-8")
+except:
+    print(f"USAGE : python3 {sys.argv[0]} '<FONT_PATH/FONT_URL>' '<COLOR>' '<BACKGROUND/FALSE>' '<TEXT>'")
+#}END.
