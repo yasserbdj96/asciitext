@@ -5,7 +5,7 @@
 
 <p>Text to ASCII Art Generator.</p>
 
-[![Python package](https://github.com/yasserbdj96/asciitext/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/asciitext/actions/workflows/python-app.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/asciitext/badge)](https://www.codefactor.io/repository/github/yasserbdj96/asciitext)
+[![Python package](https://github.com/yasserbdj96/asciitext/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/asciitext/actions/workflows/python-app.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/asciitext/badge)](https://www.codefactor.io/repository/github/yasserbdj96/asciitext) [![Join the chat at https://gitter.im/yasserbdj96/asciitext](https://badges.gitter.im/yasserbdj96/asciitext.svg)](https://gitter.im/yasserbdj96/asciitext?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <h2>Languages:</h2>
 * python3
